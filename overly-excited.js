@@ -6,7 +6,7 @@ let sentence = ["The", "walrus", "danced", "through", "the", "trees", "in", "the
     the array as the sole argument. It should iterate over the array
     and output the words to the browser console.
 */
-function addExcitement(theWordArray) {
+function addExcitement(theWordArray, character) {
 
     // Each time the for loop executes, you're going to add one more word to this string
     let buildMeUp = ""
@@ -30,8 +30,18 @@ function addExcitement(theWordArray) {
     //     //Do not put console.log in the if else statement for this exercise, it will cause the moon to disapear!
     //     console.log(buildMeUp);
     // }
+    for (let i = 0; i < theWordArray.length; i++) {
+            if ((i + 1) % 3 === 0) {
+                buildMeUp += theWordArray[i] + character;
+            } else {
+                buildMeUp += theWordArray[i] + " ";
+            }
+            //Do not put console.log in the if else statement for this exercise, it will cause the moon to disapear!
+            console.log(buildMeUp);
+        }
 
 }
 
 // Invoke the function and pass in the array
-addExcitement(sentence);
+//Allow the developer to specify which character they would like to use.
+addExcitement(sentence, "? ");
